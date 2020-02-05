@@ -1,24 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { TaskItem } from './components/TaskItem';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TaskItem
+        title="Task 1"
+        checked={false}
+      />
+      <TaskItem
+        title="Task 2"
+        checked={true}
+      />
+      <TaskItem
+        title="Task 3"
+        checked={false}
+      />
     </div>
   );
 }
