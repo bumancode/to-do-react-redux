@@ -7,6 +7,7 @@ class TaskItem extends React.Component{
 		this.state = {
 			checked: this.props.checked
 		}
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 
@@ -20,7 +21,7 @@ class TaskItem extends React.Component{
 				<Card>
 					<Checkbox
 						checked={this.state.checked}
-						onChange={(e)=>this.handleChange(e)}
+						onChange={this.handleChange}
 						value="secondary"
 						color="primary"
 					/>
